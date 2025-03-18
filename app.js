@@ -1,5 +1,10 @@
 let listaAmigos = [];
 
+function limparCampo(){
+    let campo = document.querySelector('input');
+    campo.value = '';
+}
+
 function adicionarAmigo(){
     let nomeAmigo = document.querySelector('input').value;
     if (nomeAmigo == ''){
