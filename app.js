@@ -15,6 +15,13 @@ function mostrarListaAmigos(){
     }
 }
 
+function exibirAmigoSecreto(amigo){
+    let lista = document.querySelector('#resultado');
+    let item = document.createElement('li');
+    item.appendChild(document.createTextNode(`Amigo secreto sorteado é: ${amigo}`));
+    lista.appendChild(item);
+}
+
 function adicionarAmigo(){
     let nomeAmigo = document.querySelector('input').value;
     if (nomeAmigo == ''){
