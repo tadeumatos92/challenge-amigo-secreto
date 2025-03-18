@@ -27,3 +27,10 @@ function adicionarAmigo(){
         mostrarListaAmigos();
     }         
 }
+
+function sortearAmigo(){
+    let amigoSecreto = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
+    console.log(amigoSecreto);
+    exibirAmigoSecreto(amigoSecreto);
+
+}
