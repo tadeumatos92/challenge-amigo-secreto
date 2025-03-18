@@ -9,6 +9,7 @@ function limparCampo(){
 //FUNÇÃO QUE MOSTRA A LISTA DE AMIGOS NA TELA
 function mostrarListaAmigos(){
     let lista = document.querySelector('#listaAmigos');
+    lista.innerHTML = '';
     for(var i = 0; i < listaAmigos.length; i++){
         let item = document.createElement('li');
         item.appendChild(document.createTextNode(listaAmigos[i]));
@@ -19,6 +20,7 @@ function mostrarListaAmigos(){
 //FUNÇÃO QUE EXIBE NA TELA O AMIGO SECRETO SORTEADO
 function exibirAmigoSecreto(amigo){
     let lista = document.querySelector('#resultado');
+    lista.innerHTML = '';
     let item = document.createElement('li');
     item.appendChild(document.createTextNode(`Amigo secreto sorteado é: ${amigo}`));
     lista.appendChild(item);
