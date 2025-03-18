@@ -1,13 +1,14 @@
 let listaAmigos = [];
 
+//FUNÇÃO QUE LIMPA O CAMPO INPUT
 function limparCampo(){
     let campo = document.querySelector('input');
     campo.value = '';
 }
 
+//FUNÇÃO QUE MOSTRA A LISTA DE AMIGOS NA TELA
 function mostrarListaAmigos(){
     let lista = document.querySelector('#listaAmigos');
-    lista.innerHTML = '';
     for(var i = 0; i < listaAmigos.length; i++){
         let item = document.createElement('li');
         item.appendChild(document.createTextNode(listaAmigos[i]));
@@ -15,6 +16,7 @@ function mostrarListaAmigos(){
     }
 }
 
+//FUNÇÃO QUE EXIBE NA TELA O AMIGO SECRETO SORTEADO
 function exibirAmigoSecreto(amigo){
     let lista = document.querySelector('#resultado');
     let item = document.createElement('li');
@@ -22,6 +24,7 @@ function exibirAmigoSecreto(amigo){
     lista.appendChild(item);
 }
 
+//FUNÇÃO QUE ADICIONA AMIGOS A LISTA
 function adicionarAmigo(){
     let nomeAmigo = document.querySelector('input').value;
     if (nomeAmigo == ''){
@@ -29,15 +32,14 @@ function adicionarAmigo(){
     } else {
         let campo = document.querySelector('ul');
         listaAmigos.push(nomeAmigo);
-        console.log(listaAmigos);
         limparCampo();
         mostrarListaAmigos();
     }         
 }
 
+//FUNÇÃO QUE SORTEIA AMIGO SECRETO
 function sortearAmigo(){
     let amigoSecreto = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
-    console.log(amigoSecreto);
     exibirAmigoSecreto(amigoSecreto);
 
 }
